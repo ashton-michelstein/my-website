@@ -8,7 +8,8 @@ export default async function Home() {
   const projects = await getProjects()
 
   return (
-    <div className="mx-auto py-20 bg-zinc-900">
+    <div className = "bg-zinc-900">
+    <div className="max-w-4xl mx-auto py-20 bg-zinc-900">
       <h1 className="text-7xl font-extrabold text-white">
         Hello, I'm Ashton </h1>
       <p className="mt-3 text-xl text-white"> i'll put my projects and stuff on here lol 🫴🟣. </p>
@@ -30,6 +31,7 @@ export default async function Home() {
         </Link>
       ))}
       </div>
+    </div>
     </div>
   );
 }
