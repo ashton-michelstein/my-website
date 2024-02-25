@@ -2,12 +2,14 @@ import { getProjects } from "@/sanity/sanity-utils";
 import { Project } from "@/types/Projects";
 import Image from 'next/image'
 import Link from "next/link";
-
+import Cursor from '../Cursor';
 
 export default async function Home() {
   const projects = await getProjects()
 
   return (
+    <>
+    <Cursor/>
     <div className = "bg-zinc-900">
     <div className="max-w-4xl mx-auto py-20 bg-zinc-900">
       <h1 className="text-7xl font-extrabold text-white">
@@ -33,5 +35,6 @@ export default async function Home() {
       </div>
     </div>
     </div>
+    </>
   );
 }
