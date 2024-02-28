@@ -37,7 +37,13 @@ const project = {
             title: 'Content',
             type: 'array',
             of: [{type: 'block'}],
+        },
+        {
+            name: 'date',
+            title: 'Date',
+            type: 'string'
         }
+
     ]
 }
 
