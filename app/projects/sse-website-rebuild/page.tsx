@@ -29,9 +29,6 @@ export default async function SSEWebsiteRebuild() {
                 <br/>
                 I am working with the front-end development team, which consists of 5 students. This is still an ongoing project
                 which has been in progress for about 6 months. We hope to have the website finished by the end of the 2023-2024 school year.
-
-                
-                
                 </p>
 			</div>
 		</div>

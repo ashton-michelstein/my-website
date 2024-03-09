@@ -8,5 +8,6 @@ export type Project =  {
     image: string
     url: string
     date: string
+    status: string
     content: PortableTextBlock[]
 }

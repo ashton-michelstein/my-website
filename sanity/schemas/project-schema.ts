@@ -42,6 +42,11 @@ const project = {
             name: 'date',
             title: 'Date',
             type: 'string'
+        },
+        {
+            name: 'status',
+            title: 'Status',
+            type: 'string'
         }
 
     ]

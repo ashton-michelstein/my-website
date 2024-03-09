@@ -2,8 +2,8 @@ import Cursor from "@/components/Cursor"
 import { getProject } from "@/sanity/sanity-utils"
 import Image from "next/image"
 
-export default async function SecondTest() {
-    const project = await getProject("second-test")
+export default async function UFund() {
+    const project = await getProject("u-fund")
     return (
         <>
         <Cursor/>
