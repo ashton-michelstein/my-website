@@ -6,32 +6,31 @@ export default async function SSEWebsiteRebuild() {
     const project = await getProject("sse-website-rebuild")
     return (
         <>
-        <Cursor/>
-        <div className="bg-neutral-900">
-    	<div className="max-w-3xl mx-auto py-20 bg-neutral-900">
-				<h1 className="text-7xl font-extrabold text-white"> {project.name} </h1>
-				<p className = "ml-3 mt-20 text-base text-white"> First off, let me just say that I'm so glad this project
-                happened, because the old website is <a href="https://www.merriam-webster.com/dictionary/ugly" target= "_blank" className = "underline hover:no-underline hover:text-indigo-600 text-indigo-300">UGLY</a>.
-                Here is what it looked like before:
-                <br/>
-                <br/>
-                <Image
-                src = "/old-sse.png"
-                width={750}
-                height={750}
-                alt="Old SSE Website"
-                />
-                <br/>
-                I joined this project when I first switched into the Software Engineering program at RIT, and it has been a great
-                learning experience so far. I had no exposure to Typescript, React, or Next.js prior to joining this project, so this
-                redesign has pushed me to explore new things.
-                <br/>
-                <br/>
-                I am working with the front-end development team, which consists of 5 students. This is still an ongoing project
-                which has been in progress for about 6 months. We hope to have the website finished by the end of the 2023-2024 school year.
-                </p>
-			</div>
-		</div>
-		</>
+            <Cursor />
+            <div className="background">
+                <div className="content">
+                    <Image src={project.image} width={100} height={100} alt="SSE Logo" className="mb-5" />
+                    <h1 className="header"> {project.name}</h1>
+                    <br></br>
+                    <h3 className="sub-header">Overview</h3>
+                    <p className="description"> The old website for the Society of Software Engineers was ugly and in desperate need of a redesign.
+                        This project consisted of 3 teams — front-end, back-end, and UI/UX — who worked together with the common goal to make
+                        the website more appealing and accessible.</p>
+                    <br></br>
+                    <h3 className="sub-header">What I Learned</h3>
+                    <p className="description">Here are some of my most important takeaways from this project:</p>
+                    <ul className="list-disc custom-list">
+                        <li className="mt-2">Organization is a must when working with a group </li>
+                        <li>Clear communication with all team members is crucial</li>
+                        <li>Tailwind makes using CSS much less painful</li>
+                        <li>UI/UX is IMPORTANT. What the user sees and experiences determines if they will use the website again</li>
+                        <li>React and Next.js encourage modularity. Complex apps can be broken into smaller, reusable pieces</li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </>
     )
 }
