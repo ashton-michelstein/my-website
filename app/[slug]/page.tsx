@@ -11,9 +11,9 @@ export default async function Page({ params }: Props) {
         <>
             <div className="content">
             <h1 className="header"> {page.title}</h1>
-            <h3 className="description">
-                <PortableText value={page.content}></PortableText>
-            </h3>
+            <div className="description">
+                <PortableText value={page.content} ></PortableText>
+            </div>
             </div>
         </>
     )
