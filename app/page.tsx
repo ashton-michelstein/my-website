@@ -17,7 +17,7 @@ export default async function Home() {
     <>
       {/* <Cursor/> */}
         <div className="py-20">
-          <h1 className="text-7xl font-extrabold text-white"> Hello, I'm Ashton </h1>
+          <h1 className="text-7xl font-extrabold text-white"> Hello, I&apos;m Ashton </h1>
           <p className="mt-3 text-xl text-white"> I am a Software Engineer
           at Rochester Institute of Technology, set to graduate in 2027. I have a passion for web development and OOP, and I
           am always eager to learn more and step outside of my comfort zone.</p>
