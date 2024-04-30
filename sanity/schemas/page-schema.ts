@@ -24,6 +24,11 @@ const page = {
             of: [
                 {type: "block"}
             ]
+        },
+        {
+            name: "hasPDF",
+            title: "Has PDF",
+            type: "string"
         }
 
     ]

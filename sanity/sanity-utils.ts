@@ -13,7 +13,7 @@ export async function getProjects(): Promise<Project[]> {
     const client = createClient(clientConfig);
 
     return client.fetch(
-        groq`*[_type == "project"]{
+        groq`*[_type == "project"] | order(_id desc) {
             _id,
             _createdAt,
             name,
@@ -68,7 +68,8 @@ export async function getPage(slug: string): Promise<Page> {
             _createdAt,
             title,
             "slug": slug.current,
-            content
+            content,
+            hasPDF
         }`,
         {slug}
     );

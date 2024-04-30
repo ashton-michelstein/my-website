@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { getPages } from "@/sanity/sanity-utils";
+import React from "react";
+import Cursor from "../Cursor"
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,11 +25,12 @@ const pages = await getPages()
   return (
     <html lang="en">
       <body className="bg-neutral-900 max-w-5xl mx-auto py-10">
-        <header className="flex items-center justify-between">
-          <Link href="/" className="text-indigo-300 text-lg font-bold hover:scale-110 hover:text-white transition">Home</Link>
-          <div className="flex items-center gap-3 text-indigo-300 text-lg font-bold">
+      <Cursor/>
+        <header className="flex items-center justify-between text-lg font-bold">
+          <Link href="/" className="button">Home</Link>
+          <div className="flex items-center gap-3 text-lg font-bold">
             {pages.map(page => (
-              <Link href={`/${page.slug}`} key= {page._id} className="hover:scale-110 hover:text-white transition">{page.title}</Link>
+              <Link href={`/${page.slug}`} key= {page._id} className="button">{page.title}</Link>
             ))}
           </div>
         </header>

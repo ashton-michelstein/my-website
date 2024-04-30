@@ -5,5 +5,7 @@ export type Page = {
     _createdAt: Date,
     title: string,
     slug: string,
-    content: PortableTextBlock[]
+    content: PortableTextBlock[],
+    hasPDF: string
+
 }

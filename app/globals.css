@@ -3,13 +3,21 @@
 @tailwind utilities;
 
 body {
-    /* cursor: none; */
+    cursor: none;
 }
 a {
-    /* cursor: none; */
+    cursor: none;
 }
 
-/* .custom-cursor {
+html {
+  cursor: none;
+}
+
+iframe {
+  pointer-events: none;
+}
+
+.custom-cursor {
     position: fixed;
     top: -12px;
     left: -12px;
@@ -24,7 +32,7 @@ a {
     justify-content: center;
     align-items: center;
     background-color: white;
-} */
+}
 
 .background {
     @apply bg-neutral-900;
@@ -37,7 +45,7 @@ a {
   }
   
   .header {
-    @apply text-center;
+    @apply text-left;
     @apply text-7xl;
     @apply font-extrabold;
     @apply text-white;
@@ -62,3 +70,30 @@ a {
     @apply text-white;
     @apply leading-normal;
   }
+
+.special-list-item {
+  @apply text-indigo-300;
+  @apply hover:underline;
+}
+
+.special-list {
+  @apply list-disc;
+  @apply ml-4;
+}
+
+.button {
+  @apply inline-block;
+  @apply py-2;
+  @apply px-4;
+  @apply bg-neutral-700;
+  @apply text-white;
+  @apply rounded-md;
+  @apply no-underline;
+  @apply transition;
+  @apply duration-300;
+  @apply ease-in-out;
+}
+
+.button:hover {
+  @apply bg-neutral-800;
+}
