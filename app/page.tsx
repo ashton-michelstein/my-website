@@ -19,7 +19,8 @@ export default async function Home() {
         <div className="py-20">
           <h1 className="text-7xl font-extrabold text-white"> Hello, I'm Ashton </h1>
           <p className="mt-3 text-xl text-white"> I am a Software Engineer
-          at Rochester Institute of Technology. I have a passion for </p>
+          at Rochester Institute of Technology, set to graduate in 2027. I have a passion for web development and OOP, and I
+          am always eager to learn more and step outside of my comfort zone.</p>
           <h2 className="mt-24 font-bold text-white text-3xl"> My Projects ⬇️ </h2>
           <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project: Project) => (

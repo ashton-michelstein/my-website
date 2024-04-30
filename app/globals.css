@@ -34,6 +34,11 @@ iframe {
     background-color: white;
 }
 
+.default-cursor {
+  cursor: auto
+  
+}
+
 .background {
     @apply bg-neutral-900;
   }

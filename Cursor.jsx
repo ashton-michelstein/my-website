@@ -1,38 +1,54 @@
 "use client"
-import React, { useEffect } from 'react'
-import { gsap } from 'gsap'
-
+import React, { useEffect, useState } from 'react';
+import { gsap } from 'gsap';
 
 const Cursor = () => {
-    useEffect(() => {
-        const cursor = document.getElementById("custom-cursor")
-        const links = document.querySelectorAll('a')
-        const onMouseMove = (event) => {
-            const {clientX, clientY} = event
-            gsap.set(cursor, {x: clientX, y: clientY})
-        }
+  const [isCursorWorking, setIsCursorWorking] = useState(true);
 
-        const onMouseEnterLink = () => {
-            gsap.to(cursor, {scale: 2})
-        };
+  useEffect(() => {
+    const cursor = document.getElementById("custom-cursor");
+    const links = document.querySelectorAll('a');
 
-        const onMouseLeaveLink = () => {
-            gsap.to(cursor, {scale: 1})
-        };
+    const onMouseMove = (event) => {
+      const { clientX, clientY } = event;
+      gsap.set(cursor, { x: clientX, y: clientY });
+    };
 
-        document.addEventListener('mousemove', onMouseMove)
+    const onMouseEnterLink = () => {
+      gsap.to(cursor, { scale: 2 });
+    };
 
-        links.forEach(link => {
-            link.addEventListener('mouseenter', onMouseEnterLink)
-            link.addEventListener('mouseleave', onMouseLeaveLink)
-        });
-        document.addEventListener('mousemove', onMouseMove)
-    })
-    return(
-        <div id ="custom-cursor" className ="custom-cursor">
+    const onMouseLeaveLink = () => {
+      gsap.to(cursor, { scale: 1 });
+    };
 
-        </div>
-    )
-}
+    document.addEventListener('mousemove', onMouseMove);
 
-export default Cursor
+    links.forEach(link => {
+      link.addEventListener('mouseenter', onMouseEnterLink);
+      link.addEventListener('mouseleave', onMouseLeaveLink);
+    });
+
+    const checkCursorPosition = setTimeout(() => {
+      const cursorPosition = cursor.getBoundingClientRect();
+      setIsCursorWorking(cursorPosition.x !== 0 && cursorPosition.y !== 0);
+    }, 1000)
+
+    return () => {
+      document.removeEventListener('mousemove', onMouseMove);
+      links.forEach(link => {
+        link.removeEventListener('mouseenter', onMouseEnterLink);
+        link.removeEventListener('mouseleave', onMouseLeaveLink);
+      });
+      clearTimeout(checkCursorPosition);
+    };
+  }, []);
+
+  return (
+    <>
+      {isCursorWorking ? (<div id="custom-cursor" className="custom-cursor"></div>) : (<div className="default-cursor"></div>)}
+    </>
+  );
+};
+
+export default Cursor;
