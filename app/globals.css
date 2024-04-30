@@ -13,9 +13,6 @@ html {
   cursor: none;
 }
 
-iframe {
-  pointer-events: none;
-}
 
 .custom-cursor {
     position: fixed;
@@ -35,7 +32,8 @@ iframe {
 }
 
 .default-cursor {
-  cursor: auto
+  cursor: auto;
+  position: relative;
   
 }
 
