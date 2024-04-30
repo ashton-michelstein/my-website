@@ -1,4 +1,3 @@
-import Cursor from "@/components/Cursor"
 import { getProject } from "@/sanity/sanity-utils"
 import Image from "next/image"
 
@@ -6,7 +5,7 @@ export default async function SSEWebsiteRebuild() {
     const project = await getProject("sse-website-rebuild")
     return (
         <>
-            <Cursor />
+            {/* <Cursor/> */}
             <div className="background">
                 <div className="content">
                     <Image src={project.image} width={100} height={100} alt="SSE Logo" className="mb-5" />

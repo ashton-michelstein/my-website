@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 body {
-    cursor: none;
+    /* cursor: none; */
 }
 a {
-    cursor: none;
+    /* cursor: none; */
 }
 
-.custom-cursor {
+/* .custom-cursor {
     position: fixed;
     top: -12px;
     left: -12px;
@@ -24,7 +24,7 @@ a {
     justify-content: center;
     align-items: center;
     background-color: white;
-}
+} */
 
 .background {
     @apply bg-neutral-900;
@@ -37,6 +37,7 @@ a {
   }
   
   .header {
+    @apply text-center;
     @apply text-7xl;
     @apply font-extrabold;
     @apply text-white;

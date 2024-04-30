@@ -2,7 +2,6 @@ import { getProjects } from "@/sanity/sanity-utils";
 import { Project } from "@/types/Projects";
 import Image from 'next/image'
 import Link from "next/link";
-import Cursor from '../components/Cursor';
 import { PortableText } from '@portabletext/react'
 
 const description = (project: Project) => {
@@ -15,9 +14,8 @@ export default async function Home() {
   const projects = await getProjects()
   return (
     <>
-      <Cursor />
-      <div className="bg-neutral-900">
-        <div className="max-w-5xl mx-auto py-20 bg-neutral-900">
+      {/* <Cursor /> */}
+        <div className="py-20">
           <h1 className="text-7xl font-extrabold text-white"> Hello, I'm Ashton </h1>
           <p className="mt-3 text-xl text-white"> description description description description </p>
           <h2 className="mt-24 font-bold text-white text-3xl"> My Projects ⬇️ </h2>
@@ -45,7 +43,6 @@ export default async function Home() {
             ))}
           </div>
         </div>
-      </div>
     </>
   );
 }

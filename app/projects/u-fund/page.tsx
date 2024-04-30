@@ -1,4 +1,3 @@
-import Cursor from "@/components/Cursor"
 import { getProject } from "@/sanity/sanity-utils"
 import Image from "next/image"
 
@@ -6,7 +5,7 @@ export default async function UFund() {
     const project = await getProject("u-fund")
     return (
         <>
-        <Cursor/>
+        {/* <Cursor/> */}
         <div className="bg-neutral-900">
     	<div className="max-w-3xl mx-auto py-20 bg-neutral-900">
 				<h1 className="text-7xl font-extrabold text-white"> {project.name} </h1>
