@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getPages } from "@/sanity/sanity-utils";
 import React from "react";
 import Cursor from "../Cursor"
+import { Analytics } from "@vercel/analytics/react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,6 +27,7 @@ const pages = await getPages()
     <html lang="en">
       <body className="bg-neutral-900 max-w-5xl mx-auto py-10">
       <Cursor/>
+      <Analytics/>
         <header className="flex items-center justify-between text-lg font-bold">
           <Link href="/" className="button">Home</Link>
           <div className="flex items-center gap-3 text-lg font-bold">
