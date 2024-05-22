@@ -42,7 +42,7 @@ html {
   }
   
   .content {
-    @apply max-w-3xl;
+    @apply max-w-5xl;
     @apply mx-auto py-20;
     @apply bg-neutral-900;
   }
