@@ -35,7 +35,7 @@ export default async function Page({ params }: Props) {
             serializers={customSerializers}
           />}
          {hasPDF && (
-            <iframe src="Ashton_Michelstein_Resume.pdf" className="mt-10" width="100%" height="800px" title="PDF Viewer" />
+            <iframe src="Ashton_Michelstein_Resume.pdf" className="mt-10" width="100%" height="800px" title="Resume" />
           )}
         </div>
       </div>
