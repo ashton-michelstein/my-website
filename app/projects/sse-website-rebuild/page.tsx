@@ -11,7 +11,7 @@ export default async function SSEWebsiteRebuild() {
                     <h1 className="header"> {project.name}</h1>
                     <br></br>
                     <h3 className="sub-header">Overview</h3>
-                    <p className="description"> The old website for the Society of Software Engineers was ugly and in desperate need of a redesign.
+                    <p className="description"> The old website for the Society of Software Engineers was in desperate need of a redesign.
                         This project consisted of 3 teams — front-end, back-end, and UI/UX — who worked together with the common goal to make
                         the website more appealing and accessible.</p>
                     <br></br>
