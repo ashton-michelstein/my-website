@@ -22,7 +22,7 @@ export default async function Home() {
             Software Engineering and minoring in Cybersecurity. I have a passion for learning new things and expanding my skillset.
             <br></br>
             <br></br>
-            On this website, you can learn about some of the personal projects I've worked on.
+            On this website, you can learn about some of the personal projects I&apos;ve worked on.
             </p>
           <h2 className="mt-24 font-bold text-white text-3xl"> My Projects ⬇️ </h2>
           <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
